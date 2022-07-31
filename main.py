@@ -30,14 +30,12 @@ def get_content():
 
     keys = all_products[0].keys()
 
+    #file operations to export to csv
     with open('products.csv', 'w', newline='') as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(all_products)
 
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     get_content()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
