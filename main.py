@@ -11,7 +11,7 @@ def get_content():
     # Create top_items as empty list
     all_products = []
 
-    # Extract and store in top_items according to instructions on the left
+    # Extract and store in top_items
     products = soup.select('div.thumbnail')
     for product in products:
         name = product.select('h4 > a')[0].text.strip()
